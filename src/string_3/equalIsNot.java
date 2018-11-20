@@ -5,7 +5,7 @@ of "not" anywhere in the string (case sensitive).
 https://codingbat.com/prob/p141736
  */
 
-package String_3;
+package string_3;
 
 public class equalIsNot {
 

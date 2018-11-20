@@ -6,7 +6,7 @@ letter immediately following it. (Note: Character.isLetter(char) tests if a char
 https://codingbat.com/prob/p199171
 */
 
-package String_3;
+package string_3;
 
 public class countYZ {
 

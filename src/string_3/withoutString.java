@@ -6,7 +6,7 @@ so with "xxx" removing "xx" leaves "x".
 https://codingbat.com/prob/p192570
 */
 
-package String_3;
+package string_3;
 
 public class withoutString {
 

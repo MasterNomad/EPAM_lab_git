@@ -1,7 +1,7 @@
-import String_3.countYZ;
-import String_3.equalIsNot;
-import String_3.gHappy;
-import String_3.withoutString;
+import string_3.countYZ;
+import string_3.equalIsNot;
+import string_3.gHappy;
+import string_3.withoutString;
 
 public class Main {
 

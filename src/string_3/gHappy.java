@@ -5,7 +5,7 @@ true if all the g's in the given string are happy.
 https://codingbat.com/prob/p198664
  */
 
-package String_3;
+package string_3;
 
 public class gHappy {
 
