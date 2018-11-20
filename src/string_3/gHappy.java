@@ -19,20 +19,12 @@ public class gHappy {
 
         while (index != -1) {
 
-            if (index == 0 && str.charAt(index + 1) != 'g') {
+            if ((index == 0 || str.charAt(index - 1) != 'g') && (index == str.length()-1 || str.charAt(index + 1) != 'g')) {
                 return false;
             }
-            if (index == str.length()-1 && str.charAt(index - 1) != 'g') {
-                return false;
-            }
-            if (str.charAt(index - 1) != 'g' && str.charAt(index + 1) != 'g') {
-                return false;
-            }
-
             index = str.indexOf(str.charAt(index), ++index);
         }
 
         return true;
-
     }
 }
