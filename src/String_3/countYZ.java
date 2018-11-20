@@ -10,7 +10,7 @@ package String_3;
 
 public class countYZ {
 
-    public int start(String str) {
+    public int start(final String str) {
 
         int result = 0;
         char[] search = {'y', 'z'};
@@ -22,17 +22,17 @@ public class countYZ {
         return result;
     }
 
-    private int countLetter(String str, char letter) {
+    private int countLetter(final String str, final char letter) {
 
         int result = 0;
-        str = str.toLowerCase();
-        int index = str.indexOf(letter);
+        String lowerStr = str.toLowerCase();
+        int index = lowerStr.indexOf(letter);
 
         while (index >= 0) {
-            if (index == str.length() - 1 || !Character.isLetter(str.charAt(index + 1))) {
+            if (index == lowerStr.length() - 1 || !Character.isLetter(lowerStr.charAt(index + 1))) {
                 result++;
             }
-            index = str.indexOf(letter, index + 1);
+            index = lowerStr.indexOf(letter, index + 1);
         }
 
         return result;
