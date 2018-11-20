@@ -28,7 +28,7 @@ public class countYZ {
         String lowerStr = str.toLowerCase();
         int index = lowerStr.indexOf(letter);
 
-        while (index >= 0) {
+        while (index != -1) {
             if (index == lowerStr.length() - 1 || !Character.isLetter(lowerStr.charAt(index + 1))) {
                 result++;
             }
