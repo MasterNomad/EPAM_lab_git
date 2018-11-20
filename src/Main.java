@@ -1,3 +1,4 @@
+import array_3.fix45;
 import array_3.maxSpan;
 import string_3.countYZ;
 import string_3.equalIsNot;
@@ -37,6 +38,11 @@ public class Main {
         int[] nums = {1, 4, 2, 1, 4, 4, 4};
         System.out.println("maxSpan: Возвращает наибольшее кол-во элементов, между двумя одинаковыми в массиве:" + Arrays.toString(nums));
         System.out.println(new maxSpan().start(nums));
+        System.out.println();
+
+        nums = new int[]{5, 5, 4, 2, 4, 1, 4};
+        System.out.println("fix45: Выставляет все 5 за 4 в массиве:" + Arrays.toString(nums));
+        System.out.println(Arrays.toString(new fix45().start(nums)));
         System.out.println();
 
     }
