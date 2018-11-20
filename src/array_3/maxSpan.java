@@ -33,7 +33,7 @@ public class maxSpan {
 
     }
 
-    private int lastIndexOf(int[] array, int valueToFind, int endIndex) {
+    private int lastIndexOf(final int[] array, final int valueToFind, final int endIndex) {
 
         for (int i = array.length - 1; i >= endIndex; i--) {
             if (valueToFind == array[i]) {
