@@ -1,4 +1,5 @@
 import array_3.fix45;
+import array_3.linearIn;
 import array_3.maxSpan;
 import string_3.countYZ;
 import string_3.equalIsNot;
@@ -43,6 +44,12 @@ public class Main {
         nums = new int[]{5, 5, 4, 2, 4, 1, 4};
         System.out.println("fix45: Выставляет все 5 за 4 в массиве:" + Arrays.toString(nums));
         System.out.println(Arrays.toString(new fix45().start(nums)));
+        System.out.println();
+
+        nums = new int[]{-1, 0, 3, 3, 3, 10, 12};
+        int[] nums2 = {-1, 0, 3, 12};
+        System.out.println("linearIn: Проверяет все ли элементы второго массива есть в первом (массивы отсортированы):" + Arrays.toString(nums) + " | " + Arrays.toString(nums2));
+        System.out.println(new linearIn().start(nums, nums2));
         System.out.println();
 
     }
