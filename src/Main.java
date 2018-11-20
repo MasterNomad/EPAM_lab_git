@@ -1,7 +1,10 @@
+import array_3.maxSpan;
 import string_3.countYZ;
 import string_3.equalIsNot;
 import string_3.gHappy;
 import string_3.withoutString;
+
+import java.util.Arrays;
 
 public class Main {
 
@@ -30,6 +33,12 @@ public class Main {
         System.out.printf("gHappy: Проверяет все ли 'g' парные в строке  \"%s\"%n", str1);
         System.out.println(new gHappy().start(str1));
         System.out.println();
+
+        int[] nums = {1, 4, 2, 1, 4, 4, 4};
+        System.out.println("maxSpan: Возвращает наибольшее кол-во элементов, между двумя одинаковыми в массиве:" + Arrays.toString(nums));
+        System.out.println(new maxSpan().start(nums));
+        System.out.println();
+
     }
 
 }
