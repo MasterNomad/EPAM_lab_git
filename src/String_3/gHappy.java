@@ -15,10 +15,13 @@ public class gHappy {
             return false;
         }
 
-        int index = str.indexOf('g',1);
+        int index = str.indexOf('g');
 
-        while (index > 0) {
+        while (index != -1) {
 
+            if (index == 0 && str.charAt(index + 1) != 'g') {
+                return false;
+            }
             if (index == str.length()-1 && str.charAt(index - 1) != 'g') {
                 return false;
             }
