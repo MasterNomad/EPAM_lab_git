@@ -1,5 +1,6 @@
 import array_3.fix45;
 import array_3.linearIn;
+import array_3.maxMirror;
 import array_3.maxSpan;
 import string_3.countYZ;
 import string_3.equalIsNot;
@@ -50,6 +51,11 @@ public class Main {
         int[] nums2 = {-1, 0, 3, 12};
         System.out.println("linearIn: Проверяет все ли элементы второго массива есть в первом (массивы отсортированы):" + Arrays.toString(nums) + " | " + Arrays.toString(nums2));
         System.out.println(new linearIn().start(nums, nums2));
+        System.out.println();
+
+        nums = new int[]{21, 22, 9, 8, 7, 6, 23, 24, 6, 7, 8, 9, 25, 7, 8, 9};
+        System.out.println("maxMirror: Возвращает длинну наибольшей зеркальной последовательности в массиве" + Arrays.toString(nums));
+        System.out.println(new maxMirror().start(nums));
         System.out.println();
 
     }
