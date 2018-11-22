@@ -13,26 +13,12 @@ public class countYZ {
     public int start(final String str) {
 
         int result = 0;
-        char[] search = {'y', 'z'};
+        String search = "yz";
 
-        for (char letter : search) {
-            result += countLetter(str, letter);
-        }
-
-        return result;
-    }
-
-    private int countLetter(final String str, final char letter) {
-
-        int result = 0;
-        String lowerStr = str.toLowerCase();
-        int index = lowerStr.indexOf(letter);
-
-        while (index != -1) {
-            if (index == lowerStr.length() - 1 || !Character.isLetter(lowerStr.charAt(index + 1))) {
+        for (int i = 0; i < str.length(); i++) {
+            if (search.indexOf(str.toLowerCase().charAt(i)) != -1 && (i == str.length() - 1 || !Character.isLetter(str.charAt(i + 1)))) {
                 result++;
             }
-            index = lowerStr.indexOf(letter, index + 1);
         }
 
         return result;
