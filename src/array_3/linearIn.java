@@ -16,20 +16,19 @@ public class linearIn {
         }
 
         int innerIndex = 0;
-        int innerLength = inner.length-1;
 
         for (int i : outer) {
-
             if (i > inner[innerIndex]) {
                 return false;
             }
             if (i == inner[innerIndex]) {
                 innerIndex++;
             }
-            if (innerIndex > innerLength) {
+            if (innerIndex > inner.length-1) {
                 return true;
             }
         }
+
         return false;
     }
 
