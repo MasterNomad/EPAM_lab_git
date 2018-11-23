@@ -42,7 +42,7 @@ public class Main {
         System.out.println();
 
         //fix45
-        nums = new int[]{5, 5, 4, 2, 4, 1, 4};
+        nums = new int[]{5, 5, 4, 1, 4, 1};
         System.out.println("fix45: Выставляет все 5 за 4 в массиве:" + Arrays.toString(nums));
         System.out.println(Arrays.toString(new fix45().start(nums)));
         System.out.println();
