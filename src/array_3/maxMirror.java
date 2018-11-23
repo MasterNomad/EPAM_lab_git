@@ -17,13 +17,13 @@ public class maxMirror {
         }
 
         int result = 1;
+        int nextIndex;
 
         for (int i = 0; i < nums.length - result; i++) {
 
-            int nextIndex = nextIndexOf(nums, i);
+            nextIndex = nextIndexOf(nums, i);
 
             while (nextIndex != -1) {
-
                 result = Math.max(result, findMirrorLength(nums, i, nextIndex));
                 nextIndex = nextIndexOf(nums, nextIndex);
             }
