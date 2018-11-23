@@ -1,5 +1,5 @@
 /*
-Consider the leftmost and righmost appearances of some value in an array. We'll say that the "span" is the number of elements
+Consider the leftmost and rightmost appearances of some value in an array. We'll say that the "span" is the number of elements
 between the two inclusive. A single value has a span of 1. Returns the largest span found in the given array.
 (Efficiency is not a priority.)
 
@@ -26,17 +26,16 @@ public class maxSpan {
             if (lastIndex - i + 1 > result) {
                 result = lastIndex - i + 1;
             }
-
         }
 
         return result;
 
     }
 
-    private int lastIndexOf(final int[] array, final int valueToFind, final int endIndex) {
+    private int lastIndexOf(final int[] array, final int key, final int endIndex) {
 
         for (int i = array.length - 1; i >= endIndex; i--) {
-            if (valueToFind == array[i]) {
+            if (key == array[i]) {
                 return i;
             }
         }

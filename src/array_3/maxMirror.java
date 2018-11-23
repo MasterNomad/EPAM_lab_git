@@ -17,35 +17,19 @@ public class maxMirror {
         }
 
         int result = 1;
-        int tmp;
 
         for (int i = 0; i < nums.length - result; i++) {
 
-            tmp = findMaxMirrorLength(nums, i);
+            int nextIndex = nextIndexOf(nums, i);
 
-            if (tmp > result) {
-                result = tmp;
+            while (nextIndex != -1) {
+
+                result = Math.max(result, findMirrorLength(nums, i, nextIndex));
+                nextIndex = nextIndexOf(nums, nextIndex);
             }
         }
 
         return result;
-    }
-
-    private int findMaxMirrorLength(final int[] array, final int index) {
-
-        int nextIndex = nextIndexOf(array, index);
-        int max = 0;
-
-        while (nextIndex != -1) {
-
-            if (max < findMirrorLength(array, index, nextIndex)) {
-                max = findMirrorLength(array, index, nextIndex);
-            }
-
-            nextIndex = nextIndexOf(array, nextIndex);
-        }
-
-        return max;
     }
 
     private int findMirrorLength(final int[] array, int startIndex, int secondIndex) {
