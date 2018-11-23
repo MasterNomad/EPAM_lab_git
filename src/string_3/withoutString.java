@@ -12,20 +12,13 @@ public class withoutString {
 
     public String start(final String base, final String remove) {
 
-        String result = base;
-        int length = remove.length();
+        StringBuilder regex = new StringBuilder();
 
-        String lowerBase = base.toLowerCase();
-        String lowerRemove = remove.toLowerCase();
-
-        int index = lowerBase.indexOf(lowerRemove);
-
-        while (index != -1) {
-            result = result.substring(0, index) + result.substring(index + length);
-            lowerBase = result.toLowerCase();
-            index = lowerBase.indexOf(lowerRemove);
+        for (int i = 0; i< remove.length(); i++){
+           regex.append("[").append((remove.toLowerCase().charAt(i))).append(remove.toUpperCase().charAt(i)).append("]");
         }
 
-        return result;
+        return base.replaceAll(regex.toString(), "");
+
     }
 }

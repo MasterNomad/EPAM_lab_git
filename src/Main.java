@@ -1,11 +1,5 @@
-import array_3.fix45;
-import array_3.linearIn;
-import array_3.maxMirror;
-import array_3.maxSpan;
-import string_3.countYZ;
-import string_3.equalIsNot;
-import string_3.gHappy;
-import string_3.withoutString;
+import array_3.*;
+import string_3.*;
 
 import java.util.Arrays;
 
