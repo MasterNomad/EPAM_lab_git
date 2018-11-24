@@ -12,31 +12,22 @@ public class fix45 {
 
     public int[] start(int[] nums) {
 
-        int index = findNext(nums, 0, 5);
+        int j = 0;
 
-        for (int i = 0; i < nums.length - 1 && index != -1; i++) {
+        for (int i = 0; i < nums.length - 1; i++) {
 
-            if (nums[i] == 4) {
+            if (nums[i] == 4 && nums[i + 1] != 5) {
 
-                nums[index] = nums[++i];
-                nums[i] = 5;
-
-                index = findNext(nums, index, 5);
-                while (index > 0 && nums[index - 1] == 4) {
-                    index = findNext(nums, ++index, 5);
+                while (nums[j] != 5 || (j != 0 && nums[j - 1] == 4)) {
+                    j++;
                 }
+
+                nums[j] = nums[++i];
+                nums[i] = 5;
             }
         }
+
         return nums;
     }
 
-    private int findNext(final int[] array, int startIndex, int key) {
-
-        for (int i = startIndex; i < array.length; i++) {
-            if (array[i] == key) {
-                return i;
-            }
-        }
-        return -1;
-    }
 }
