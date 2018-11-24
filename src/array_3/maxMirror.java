@@ -32,13 +32,13 @@ public class maxMirror {
         return result;
     }
 
-    private int findMirrorLength(final int[] array, int startIndex, int secondIndex) {
+    private int findMirrorLength(final int[] array, int firstIndex, int secondIndex) {
 
         int result = 0;
 
-        while (startIndex < array.length && secondIndex > -1) {
+        while (firstIndex < array.length && secondIndex > -1) {
 
-            if (array[startIndex++] == array[secondIndex--]) {
+            if (array[firstIndex++] == array[secondIndex--]) {
                 result++;
             } else {
                 return result;
