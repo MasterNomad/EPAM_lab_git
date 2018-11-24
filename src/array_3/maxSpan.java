@@ -17,31 +17,25 @@ public class maxSpan {
         }
 
         int result = 1;
-        int lastIndex;
 
         for (int i = 0; i < nums.length - result; i++) {
 
-            lastIndex = lastIndexOf(nums, nums[i], i + 1);
+            result = Math.max(result, lastIndexOf(nums, i) - i + 1);
 
-            if (lastIndex - i + 1 > result) {
-                result = lastIndex - i + 1;
-            }
         }
 
         return result;
-
     }
 
-    private int lastIndexOf(final int[] array, final int key, final int endIndex) {
+    private int lastIndexOf(final int[] array, final int index) {
 
-        for (int i = array.length - 1; i >= endIndex; i--) {
-            if (key == array[i]) {
+        for (int i = array.length - 1; i > index; i--) {
+            if (array[index] == array[i]) {
                 return i;
             }
         }
 
         return -1;
     }
-
 
 }
