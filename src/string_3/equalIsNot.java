@@ -10,24 +10,17 @@ package string_3;
 public class equalIsNot {
 
     public boolean start(final String str) {
-
         return substringCounter(str, "is") == substringCounter(str, "not");
-
     }
 
     private int substringCounter(final String str, final String search) {
-
         int index = str.indexOf(search);
-
         int result = 0;
-
         while (index != -1) {
             result++;
             index = str.indexOf(search, ++index);
         }
-
         return result;
-
     }
 
 }
