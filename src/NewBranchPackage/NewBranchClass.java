@@ -5,7 +5,9 @@ package NewBranchPackage;
 public class NewBranchClass {
 
     void someCoolMethod() {
-        System.out.println("Really cool method");
+        int a = 1;
+        int b = ++a + a*2;
+        System.out.println(b);
     }
 
 }
