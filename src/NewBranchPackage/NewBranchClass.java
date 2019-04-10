@@ -9,5 +9,4 @@ public class NewBranchClass {
         int b = ++a + a*2;
         System.out.println(b);
     }
-
 }
