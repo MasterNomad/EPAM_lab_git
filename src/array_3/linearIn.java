@@ -10,13 +10,10 @@ package array_3;
 public class linearIn {
 
     public boolean start(final int[] outer, final int[] inner){
-
         if (inner.length == 0) {
             return true;
         }
-
         int innerIndex = 0;
-
         for (int i : outer) {
             if (i > inner[innerIndex]) {
                 return false;
@@ -28,7 +25,6 @@ public class linearIn {
                 return true;
             }
         }
-
         return false;
     }
 
