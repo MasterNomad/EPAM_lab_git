@@ -15,6 +15,7 @@ public class Main {
         System.out.printf("countYZ: Считает 'y' и 'z' в конце слова в строке \"%s\"%n", str1);
         System.out.println(new countYZ().start(str1));
         System.out.println();
+        System.out.println("Hello");
 
         //withoutString
         str1 = "MkjtMkx";
