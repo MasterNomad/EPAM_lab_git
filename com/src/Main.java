@@ -67,7 +67,7 @@ public class Main {
         System.out.println("slava");
     }
 
-    public void method() {
+    public void method1() {
         System.out.println("sdfg");
     }
 
