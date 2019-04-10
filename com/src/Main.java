@@ -63,4 +63,8 @@ public class Main {
 
     }
 
+    public void vetka() {
+        System.out.println("slava");
+    }
+
 }
