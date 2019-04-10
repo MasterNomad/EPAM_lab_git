@@ -67,4 +67,8 @@ public class Main {
         System.out.println("slava");
     }
 
+    public void method() {
+        System.out.println("sdfg");
+    }
+
 }
